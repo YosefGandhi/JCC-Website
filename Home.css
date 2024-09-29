@@ -1,0 +1,308 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'josefin sans', sans-serif;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 2000px;
+  position: relative;
+}
+
+.half-size-image {
+  margin-top: 0%;
+  width: 100%;
+  height: 850px;
+  position: relative;
+  overflow: hidden;
+  margin-top: -150px;
+}
+
+.half-size-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.half-size-image img.active {
+  opacity: 1;
+}
+
+
+.hero {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  color: #000000;
+  z-index: 999;
+}
+
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+nav h1 {
+  color: #fff;
+  font-size: 28px;
+  margin-right: auto;
+  margin-left: 30px;
+}
+
+nav ul {
+  list-style: none;
+  margin-left: auto;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s;
+  outline: none;
+  font-size: 20px;
+  outline: none;
+}
+
+nav ul li a:focus,
+nav ul li a:active {
+  outline: none;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  color: #ff464e;
+  outline: none;
+}
+
+nav ul li a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: transparent;
+  bottom: -5px;
+  left: 0;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+  z-index: -1;
+}
+
+nav ul li a.active::before,
+nav ul li a:hover::before {
+  transform: scaleX(1);
+  background-color: #fff;
+  z-index: 1;
+}
+
+nav ul li a:hover {
+  color: #ff464e;
+}
+
+nav ul li a:hover::before {
+  transform: scaleX(1);
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.centered-text h1{
+  font-size: 30px;
+}
+
+.centered-text {
+  position: absolute;
+  text-align: center;
+  margin-top: 750px;
+  color: #000000;
+  width: 40%;
+  text-align: justify;
+  line-height: 1.5;
+  margin-left: 380px;
+  max-width: 400px;
+}
+
+.side-text h1{
+  font-size: 30px;
+}
+
+.side-text {
+  position: absolute;
+  text-align: center;
+  margin-top: -335px;
+  color: #000000;
+  width: 40%;
+  text-align: justify;
+  line-height: 1.5;
+  margin-left: 540px;
+  width: 600px;
+}
+
+.Home-event{
+  position: absolute;
+  text-align: center;
+  margin-top: 1150px;
+  color: #000000;
+  width: 40%;
+  text-align: justify;
+  line-height: 1.5;
+  margin-left: 380px;
+  max-width: 400px;
+}
+
+.Upcoming{
+  width: 80%;
+  height: 500px;
+  margin-top: 10px;
+  position: absolute;
+}
+
+.Event-description{
+  width: 100%;
+  height: 500px;
+  margin-top: 10px;
+  position: absolute;
+  left: 400px;
+}
+
+.Event-description li a{
+  top: 500px;
+  color: #3d5ca7;
+  font-size: 20px;
+  list-style: none;
+  padding-left: 0;
+  text-decoration: none;
+}
+
+
+footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+}
+
+
+footer p {
+  margin: 0;
+}
+
+
+@media screen and (max-width: 1024px){
+   .centered-text{
+    margin-left: 100px;
+  }
+
+  .side-text{
+    margin-left: 500px;
+    width: 85%;
+  }
+
+  .home-event{
+    margin-left:500px;
+    margin-top: 400px;
+
+  }
+
+  .Upcoming{
+    margin-left: -220px;
+    margin-top: 180px;
+    height: 400px;
+  }
+
+  .Event-description {
+    margin-top: 180px;
+    left: 160px;
+  }
+}
+
+
+@media screen and (max-width: 768px){
+
+  .centered-text{
+   margin-left: 50px;
+ }
+
+ .side-text{
+   margin-left: 360px;
+   width: 100%;
+   margin-top: -430px;
+ }
+
+ .home-event{
+   margin-left:500px;
+   margin-top: 400px;
+ }
+
+ .Upcoming{
+   margin-left: -300px;
+   margin-top: 200px;
+   height: 400px;
+ }
+
+ .Event-description {
+   margin-top: 200px;
+   left: 10px;
+ }
+}
+
+
+@media screen and (max-width: 460px){
+  .centered-text{
+   margin-left: 40px;
+   font-size: 15px;
+   width: 85%;
+ }
+
+ .side-text{
+   margin-top: 50px;
+   margin-left: 0px;
+   width: 100%;
+ }
+
+ .home-event{
+   margin-left:500px;
+   margin-top: 400px;
+ }
+
+ .Upcoming{
+   margin-left:-350px;
+   margin-top: 350px;
+   height: 250px;
+   width: 150px;
+ }
+
+ .Event-description {
+   margin-top: 350px;
+   margin-left: -180px;
+   font-size: 10px;
+ }
+}

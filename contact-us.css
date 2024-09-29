@@ -1,0 +1,245 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'josefin sans', sans-serif;
+  }
+  
+  body {
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+  }
+  
+  .Bingkai-kiri {
+    position: absolute;
+    top: 0;
+    bottom: -700px;
+    left: 0;
+    width: 100px;
+    background-image: url('batik.jpeg');
+    background-repeat: repeat-y;
+    z-index: 1;
+
+  }
+  
+  .Bingkai-kanan {
+    position: absolute;
+    top: 0;
+    bottom: -700px;
+    right: 0;
+    width: 100px;
+    background-image: url('batik.jpeg');
+    background-repeat: repeat-y;
+    z-index: 1;
+  }
+  
+  /* .half-size-image {
+    margin-top: 200px;
+    width: 100%;
+    height: 850px;
+    position: relative;
+    overflow: hidden;
+    margin-top: -150px;
+  }
+  
+  .half-size-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+  }
+  
+  .half-size-image img.active {
+    opacity: 1;
+  } */
+  
+  
+  .hero {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    color: #000000;
+    z-index: 999;
+  }
+  
+  
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  nav h1 {
+    color: #fff;
+    font-size: 28px;
+    margin-right: auto;
+    margin-left: 30px;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin-left: auto;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+    outline: none;
+    font-size: 20px;
+    outline: none;
+  }
+  
+  nav ul li a:focus,
+  nav ul li a:active {
+    outline: none;
+  }
+  
+  nav ul li a.active {
+    font-weight: bold;
+    color: #ff464e;
+    outline: none;
+  }
+  
+  nav ul li a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease-in-out;
+    z-index: -1;
+  }
+  
+  nav ul li a.active::before,
+  nav ul li a:hover::before {
+    transform: scaleX(1);
+    background-color: #fff;
+    z-index: 1;
+  }
+  
+  nav ul li a:hover {
+    color: #ff464e;
+  }
+  
+  nav ul li a:hover::before {
+    transform: scaleX(1);
+  }
+  
+  .form-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: #f2f2f2;
+    margin-top: 40px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .form-container h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .form-container label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .form-container input,
+  .form-container textarea,
+  .form-container select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .form-container button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form-container button[type="submit"]:hover {
+    background-color: #45a049;
+  }
+
+  .page-description{
+    position: absolute;
+    text-align: center;
+    width: 40%;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 600px;
+    margin-top: 80px;
+    max-width: 800px;
+  }
+  
+  footer {
+    background-color: #f2f2f2;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+  }
+  
+  
+  footer p {
+    margin: 0;
+  }
+  
+@media (max-width: 768px) {
+  .form-container {
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .page-description{
+    position: absolute;
+    text-align: center;
+    width: 50%;
+    text-align: justify;
+    line-height: 1.5;
+    margin-left: 200px;
+    margin-top: 80px;
+    max-width: 600px;
+  }
+}
+
+
+@media (max-width: 460px) {
+  .form-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+

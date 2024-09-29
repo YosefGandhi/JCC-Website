@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="contact-us.css">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
+  <title>WebsiteHCI</title>
+</head>
+<body>
+  <div class="Bingkai-kiri"></div>
+  <div class="Bingkai-kanan"></div>
+  <div class="hero">
+    <nav>
+      <h1>Jockey's<br>Convention<br>Center</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="price-list.html">Price List</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a class="active" href="contact-us.html">Contact Us</a></li> 
+      </ul>
+    </nav>
+  </div>
+
+  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form id="contact-form" onsubmit="submitForm(event)">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required>
+  
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+  
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required>
+  
+      <label for="message">Message:</label>
+      <textarea id="message" required></textarea>
+  
+      <label for="contact-preference">Preferred Contact Method:</label>
+      <select id="contact-preference" required>
+        <option value="">Select One</option>
+        <option value="phone">Phone</option>
+        <option value="email">Email</option>
+      </select>
+  
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class = "page-description">
+    <h1>Please Fill the form above if you want to give us any messages!
+      For further informations, you can contact us by our phone number (021-xxxxxxx) Thanks!
+    </h1>
+  
+  <!-- <img src="BGbaru.jpg" alt="Half-size Image" class="half-size-image"> -->
+
+  <footer>
+    <p>&copy; 2023 Jockey's Convention Center. All rights reserved.</p>
+  </footer>
+  <script src="website.js"></script>
+</body>
+</html>
+
